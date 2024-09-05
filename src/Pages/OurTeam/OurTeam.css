@@ -1,0 +1,193 @@
+.team-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: relative;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title {
+  position: absolute;
+  font-family: "Inter";
+  font-size: 6em;
+  font-weight: bold;
+  color: var(--cream);
+  left: 15vw;
+  top: 15vh;
+  margin-bottom: 50px;
+}
+
+.team-box1 {
+  position: absolute;
+  display: flex;
+  top: 35vh;
+  left: 15vw;
+  height: 50vh;
+  width: 20vw;
+  margin-right: 50px;
+  background-color: var(--cream);
+  overflow: hidden;
+  filter: grayscale(100%);
+  cursor: pointer;
+  img {
+    object-fit: fill;
+  }
+}
+
+.team-box2 {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  top: 35vh;
+  left: 38vw;
+  height: 50vh;
+  width: 20vw;
+  margin-right: 50px;
+  filter: grayscale(100%);
+
+  background-color: var(--cream);
+
+  overflow: hidden;
+}
+
+.team-box3 {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  top: 35vh;
+  left: 61vw;
+  height: 50vh;
+  width: 20vw;
+  margin-right: 50px;
+  background-color: var(--cream);
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
+.big-div {
+  display: flex;
+  width: 66vw;
+  padding: 50px;
+  font-family: "Inter";
+  padding-right: 20px;
+}
+
+.person-container {
+  width: 80%;
+}
+
+.person-name {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.person-role {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.person-writeup {
+  font-size: 1em;
+  text-align: justify;
+}
+
+.person-socials {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 35px;
+}
+
+.temp-text {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  backdrop-filter: blur(30px);
+  color: white;
+  font-family: "Inter";
+  z-index: 0;
+}
+
+.person-icon1:hover {
+  color: #e1306c;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.person-icon2:hover {
+  color: #0077b5;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.person-icon3:hover {
+  color: #ff0000;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+#topScroll {
+  position: absolute;
+  top: 35vw;
+}
+@media (max-width: 500px) {
+  .team-container {
+    height: 200vh;
+    position: sticky;
+    background-color: var(--deep-blue);
+  }
+  .team-title {
+    font-size: 3.5em;
+  }
+  .team-box1 {
+    width: 80vw;
+    left: 10vw;
+    flex-direction: column;
+  }
+
+  .team-box2 {
+    top: 90vh;
+    width: 80vw;
+    left: 10vw;
+    flex-direction: column;
+  }
+
+  .team-box3 {
+    top: 145vh;
+    width: 80vw;
+    left: 10vw;
+    flex-direction: column;
+  }
+  .big-div {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+    padding-right: 0px;
+    width: 100%;
+    .person-name {
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    .person-role {
+      text-align: center;
+    }
+    .person-socials {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.footer-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  min-height: 150px;
+  background-color: var(--cream);
+  font-family: "Inter";
+                id="teamID"
+
+  border-top: solid 1px rgb(255, 255, 255);
+  padding-top: 5px;
+}
+
+.footer-heading {
+  font-weight: 600;
+  font-size: 3.2em;
+}
+
+.footer-subheading {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+.heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33%;
+}
+
+.footer-socials {
+  justify-content: center;
+  width: 33%;
+  display: flex;
+}
+
+.credits {
+  font-size: 1.3em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  width: 33%;
+}
+
+.btn {
+  margin: 0px 10px 0px 10px;
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  background: var(--cream);
+  padding: 1em;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: translateY(0.5em);
+}
+
+.credit-name {
+  text-decoration: underline 2px;
+  text-decoration-color: #0077b5;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-underline-offset: 3px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.credit-name:hover {
+  color: #0077b5;
+}
+@media (max-width: 500px) {
+  .footer-container {
+    flex-direction: column-reverse;
+    padding: 6vh 0px 6vh 0px;
+    transform: translateY(100vh);
+  }
+  .heading-container {
+    width: 100%;
+    margin: 4vh 0px 4vh 0px;
+  }
+
+  .credits {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.btn:hover .insta-footer {
+  color: #e1306c;
+}
+
+.btn:hover .linkedin-footer {
+  color: #0077b5;
+}
+
+.btn:hover .mail-footer {
+  color: #ff0000;
+}
+
+.btn:hover .github-footer {
+  color: #2f0d8b;
+}

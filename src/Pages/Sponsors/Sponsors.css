@@ -1,0 +1,237 @@
+.sponsors-container {
+  height: 200vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--cream);
+  z-index: 2;
+}
+
+.sponsors-sticky {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: var(--cream);
+  font-family: "Inter";
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.sponsors-image-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .sponsor1 {
+    position: relative;
+    background-color: var(--deep-blue);
+    top: -30vh;
+    left: 5vw;
+    width: 35vw;
+    height: 30vh;
+  }
+
+  .sponsor2 {
+    background-color: var(--deep-blue);
+
+    position: relative;
+    left: 27.5vw;
+    width: 25vw;
+    height: 25vh;
+  }
+
+  .sponsor3 {
+    background-color: var(--deep-blue);
+
+    position: relative;
+    top: 27.5vh;
+    left: 15vw;
+    width: 20vw;
+    height: 25vh;
+  }
+
+  .sponsor4 {
+    background-color: var(--deep-blue);
+
+    position: relative;
+    top: 27.5vh;
+    left: -12.5vw;
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .sponsor5 {
+    background-color: var(--deep-blue);
+    position: relative;
+    top: -12.5vh;
+    left: -22vw;
+    width: 15vw;
+    height: 50vh;
+  }
+
+  .sponsor6 {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--maroon);
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    z-index: 10;
+    top: -27.5vh;
+    left: 34vw;
+  }
+
+  .sponsor7 {
+    padding: 50px 35px 50px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: var(--maroon);
+    position: relative;
+    width: 15vw;
+    height: 45vh;
+    z-index: 10;
+    top: 15vh;
+    left: -39vw;
+  }
+
+  .sponsor8 {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--deep-blue);
+    position: relative;
+    width: 15vw;
+    height: 27vh;
+    z-index: 10;
+    top: -27vh;
+    left: -39vw;
+  }
+
+  .sponsor9 {
+    position: relative;
+
+    width: 14vw;
+    height: 14vw;
+    left: 33.5vw;
+    top: 30vh;
+    background-color: var(--deep-blue);
+  }
+}
+
+.sponsors-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.scaled {
+  width: 25vw;
+  height: 25vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: var(--deep-blue);
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 80%;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .sponsors-image-container {
+    .sponsor1 {
+      width: 60vw;
+      height: 15vh;
+      top: -20vh;
+      left: -15vw;
+    }
+
+    .sponsor6 {
+      width: 30vw;
+      height: 30vw;
+      top: -20vh;
+      left: 33vw;
+      font-size: 15px;
+    }
+    .sponsor8 {
+      width: 40vw;
+      height: 35vw;
+      top: -1vh;
+      left: 25vw;
+    }
+    .sponsor2 {
+      width: 58vw;
+      height: 15vh;
+      top: 18vh;
+
+      left: 18vw;
+    }
+
+    .sponsor5 {
+      width: 35vw;
+      height: 35vh;
+      left: -30vw;
+      top: 28vh;
+    }
+
+    .sponsor4 {
+      width: 50vw;
+      height: 15vh;
+      top: 35vh;
+      left: 20vw;
+    }
+
+    .sponsor3 {
+      width: 55vw;
+      height: 15vh;
+      top: -37vh;
+      left: 20vw;
+    }
+    .sponsor7 {
+      width: 30vw;
+      height: 30vw;
+      top: -36.5vh;
+      left: -27vw;
+      background-color: var(--deep-blue);
+      font-size: 1em;
+      padding: 10px 5px 10px 5px;
+      font-size: 12px;
+    }
+
+    .sponsor9 {
+      display: none;
+    }
+    .sponsor8 {
+      display: none;
+    }
+  }
+
+  .scaled {
+    top: -1vh;
+    font-size: 1.5em;
+  }
+}

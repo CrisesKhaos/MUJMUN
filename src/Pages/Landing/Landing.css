@@ -1,0 +1,202 @@
+.landing-main {
+  position: relative;
+  height: 250vh;
+  background-color: aqua;
+  width: 100vw;
+
+  .landing-container {
+    background-color: var(--cream);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0px;
+  }
+  img {
+    object-fit: contain;
+  }
+}
+
+.description {
+  padding-right: 50px;
+  line-height: 145%;
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: newspaper;
+  margin-bottom: 1em;
+}
+
+.menu-logo {
+  color: var(--deep-blue);
+  position: fixed;
+  left: 2.5%;
+  top: 3%;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.heading {
+  font-size: 8em;
+  position: absolute;
+  bottom: 13%;
+  left: 6%;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: var(--mar);
+  z-index: 2;
+}
+.about-section {
+  display: flex;
+  height: 100vh;
+  width: 38vw;
+  background-color: var(--cream);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  position: absolute;
+  right: 0;
+}
+.head {
+  line-height: 115%;
+  font-size: 4.5em;
+  font-family: "Inter", sans-serif;
+  color: var(--brown);
+  font-weight: bold;
+}
+
+.subhead {
+  width: 100%;
+  font-size: 3em;
+  font-family: "Inter", sans-serif;
+  color: var(--brown);
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.logo-left {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  width: 40%;
+  padding: 50px 0px 50px 50px;
+  background-color: var(--cream);
+  object-fit: contain;
+}
+
+.logo-left-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 40%;
+  left: 0px;
+  top: 0px;
+  background-color: var(--cream);
+  height: 100vh;
+  z-index: 2;
+}
+.logo-right {
+  display: flex;
+  position: absolute;
+  left: 90%;
+  width: 22vw;
+
+  background-color: var(--deep-blue);
+  z-index: 1;
+}
+
+.logo-right-overlay {
+  background-color: transparent;
+  position: absolute;
+  left: 40%;
+  height: 100vh;
+  z-index: 2;
+  padding: 50px 50px 50px 0px;
+  display: flex;
+}
+
+.menu-placeholder {
+  background-color: var(--maroon);
+  position: fixed;
+  border-radius: 50%;
+  z-index: 7;
+  cursor: pointer;
+}
+
+.register-button {
+  background-color: var(--brown);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 24px 12px 24px;
+  color: white;
+  margin: 32px;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-size: 18px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .landing-main .landing-container {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+  }
+  .logo-left {
+    height: 50vh;
+    width: 70vw;
+  }
+  .logo-left-overlay {
+    height: 50vh;
+    width: 70vw;
+  }
+  .logo-right {
+    height: 50vh;
+    width: 30vw;
+    right: 0%;
+    overflow: hidden;
+  }
+  .logo-right-overlay {
+    height: 50vh;
+    width: 30vw;
+    left: 70vw;
+    overflow: hidden;
+  }
+
+  .about-section {
+    width: 100vw;
+    height: 50vh;
+    bottom: 0px;
+  }
+  .head {
+    font-size: 52px;
+  }
+  .subhead {
+    font-size: 32px;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+  .text-landing {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description {
+    padding: 25px 25px 0px 25px;
+  }
+
+  .register-button {
+    margin: 0px;
+  }
+}
