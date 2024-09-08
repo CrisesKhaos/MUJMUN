@@ -41,7 +41,7 @@ export const commNames = [
     agenda: " Domains- Photography, Journalism",
   },
   {
-    name: "The CBFC",
+    name: "CBFC",
     description:
       " The Central Board of Film Certification is a statutory film-certification body in the Ministry of Information and Broadcasting of the Government of India. It is tasked with regulating the public exhibition of films under the provisions of the Cinematograph Act 1952.",
     agenda:

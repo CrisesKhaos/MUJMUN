@@ -1,0 +1,22 @@
+.sponsor-title {
+  font-size: 7em;
+  position: absolute;
+  top: 5vw;
+  left: 34%;
+}
+
+.card-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+
+  .card {
+    width: 70vw;
+    height: 50vh;
+    background-color: aqua;
+  }
+}
