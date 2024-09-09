@@ -1,22 +1,110 @@
 .sponsor-title {
   font-size: 7em;
   position: absolute;
-  top: 5vw;
-  left: 34%;
+  top: 2vw;
+  left: 27.5%;
+  font-family: "Inter";
+  font-weight: 600;
+  color: var(--brown);
 }
 
+.sponsor-info {
+  width: 70%;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 50px;
+  flex-direction: column;
+}
+
+.card-imgs {
+  width: 30%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.card-img {
+  object-fit: contain;
+  width: 100%;
+}
 .card-container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0px;
+  position: absolute;
+  font-family: "Inter";
 
-  .card {
-    width: 70vw;
-    height: 50vh;
-    background-color: aqua;
+  .card-title {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .card-desc {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .card1 {
+    color: white;
+    width: 60vw;
+    height: 60vh;
+    background-color: var(--deep-blue);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .card2 {
+    width: 60vw;
+    height: 60vh;
+    background-color: var(--maroon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sponsor-title {
+    font-size: 3em;
+    left: 0vw;
+    top: 11vh;
+    left: 15%;
+  }
+
+  .card-container {
+    .card1 {
+      flex-direction: column-reverse;
+      width: 80%;
+      height: 70%;
+    }
+    .card-imgs {
+      width: 100%;
+      height: 30%;
+    }
+    .card2 {
+      flex-direction: column-reverse;
+      width: 80%;
+      height: 70%;
+    }
+
+    .card-title {
+      font-size: 2.2em;
+    }
+    .sponsor-info {
+      width: 100%;
+      padding: 30px;
+      font-size: 0.9em;
+    }
   }
 }

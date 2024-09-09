@@ -163,16 +163,18 @@ export default function OurTeam(props) {
                     <div className="person-name">Jatin Juneja</div>
                     <div className="person-role">Secretary General</div>
                     <div className="person-writeup">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nullam vel risus a lacus porttitor tincidunt. Nam
-                      elementum et orci sit amet dapibus. Mauris luctus, ante ut
-                      accumsan blandit, elit quam viverra lorem, ut elementum
-                      tellus urna in sem. Curabitur cursus ac ipsum ut ornare.
-                      Sed placerat condimentum pharetra. Quisque sem augue,
-                      venenatis non fermentum in, ullamcorper sed tellus. In
-                      porttitor pellentesque eleifend. Praesent at magna
-                      feugiat, congue sapien vitae, tristique metus. Ut eget
-                      arcu dolor. In vestibulum tempus libero a finibus.
+                      It is my privilege to serve as the Secretary General for
+                      MUJMUN 11.0. I have been a part of the MUN circuit for the
+                      past seven years, which has helped shape my personality
+                      and develop me into an outgoing individual with strong
+                      social and communication skills.
+                      <br></br>I am firmly rooted in the belief that "leaders
+                      don’t force people to follow; they invite them on a
+                      journey," and with this in mind, I want all of you to be a
+                      part of our MUJMUN journey. I look forward to your
+                      participation in this conference and to making it an
+                      enlightening and enjoyable experience for everyone
+                      involved.
                     </div>
                   </div>
                   <div className="person-socials">

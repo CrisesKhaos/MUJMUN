@@ -35,7 +35,7 @@ export const commNames = [
       " Electoral Reforms in India: Enhancing Transparency, Accountability, and Trust in the Democratic Process.",
   },
   {
-    name: "International Press",
+    name: "Intn'l Press",
     description:
       " The International Press consists of a body of news agencies, broadcasters, and the like, who have their form of liberty in informing, and deliberating about events occurring in the United Nations. The International Press endeavours in promoting awareness and to wake up the consciousness of the human mind to the reality and authenticity about the events occurring in the world. It works tirelessly and with diligence in providing the truth, disclosing and elucidating on the debate among the delegates of the notable committee. ",
     agenda: " Domains- Photography, Journalism",

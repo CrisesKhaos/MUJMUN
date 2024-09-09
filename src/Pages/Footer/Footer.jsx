@@ -30,7 +30,7 @@ export default function Footer() {
             <FaLinkedinIn className="linkedin-footer" />
           </div>
         </a>
-        <a>
+        <a href="https://github.com/CrisesKhaos/MUJMUN" target="_blank">
           <div className="btn">
             <FiGithub className="github-footer" />
           </div>

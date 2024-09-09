@@ -189,18 +189,12 @@ export default function Comms(props) {
             </div>
           </motion.div>
         </motion.div>
-        <motion.div
-          style={{
-            left: slideLeft2,
-            width: "100vw",
-            height: "100vh",
-            position: "absolute",
-            top: topOffset,
-            backgroundColor: "var(--maroon)",
-          }}
-        >
-          <OurSponsors />
-        </motion.div>
+
+        <OurSponsors
+          slideLeft={slideLeft2}
+          topOffset={topOffset}
+          scrollY={scrollYProgress}
+        />
       </motion.div>
 
       <Sponsors />
