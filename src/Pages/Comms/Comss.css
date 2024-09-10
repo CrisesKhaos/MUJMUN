@@ -1,9 +1,8 @@
 .comms-container {
-  height: 400vh;
+  height: 250vh;
   width: 100vw;
   position: relative;
   background-color: var(--cream);
-  overflow: hidden;
 }
 
 .comms-displayer {

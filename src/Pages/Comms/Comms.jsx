@@ -38,19 +38,29 @@ export default function Comms(props) {
     target: commsRef,
     offset: ["start start", "end end"],
   });
-  const topOffset = useTransform(scrollYProgress, [0, 1], ["0vh", "300vh"]);
+  const { scrollYProgress: scrollYProgress2 } = useScroll({
+    target: commsRef,
+    offset: ["start start", "end start"],
+  });
+
+  const topOffset = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
   const ourTeam = useTransform(scrollYProgress, [0.2, 1], [1, 5]);
   const render = useTransform(scrollYProgress, [0.9, 1], ["none", "flex"]);
-  const slideLeft = useTransform(
-    scrollYProgress,
-    [0.2, 0.5],
-    ["0vw", "-100vw"]
+  const infoOpacity = useTransform(scrollYProgress2, [0.2, 0.3], [1, 0]);
+  const sponOpacity = useTransform(scrollYProgress2, [0.9, 1], [0, 1]);
+  const opacityCommBackround = useTransform(
+    scrollYProgress2,
+    [0, 0.001],
+    [1, 0]
   );
-  const slideLeft2 = useTransform(
-    scrollYProgress,
-    [0.2, 0.5],
-    ["100vw", "0vw"]
+  const opacityCommBackround2 = useTransform(
+    scrollYProgress2,
+    [0, 0.0001],
+    [0, 1]
   );
+
+  const width2 = useTransform(scrollYProgress2, [0.1, 1], ["100vw", "0vw"]);
+  const left2 = useTransform(scrollYProgress2, [0.1, 1], ["0vw", "50vw"]);
   useEffect(() => {
     const temp = currComm * 14.28;
     setimgYVal(`-${temp}%`);
@@ -59,33 +69,39 @@ export default function Comms(props) {
     <>
       <motion.div ref={commsRef} className="comms-container" id="commsID">
         <motion.div
+          className="comms-backround"
           style={{
-            left: slideLeft,
-            width: "100vw",
             height: "100vh",
+            display: "flex",
             position: "absolute",
             top: topOffset,
+            width: props.width,
+            left: props.leftMargin,
+            backgroundColor: "var(--deep-blue)",
+            opacity: opacityCommBackround,
           }}
+        ></motion.div>
+        <motion.div
+          className="comms-backround1"
+          style={{
+            height: "100vh",
+            display: "flex",
+            position: "absolute",
+            top: topOffset,
+            width: width2,
+            left: left2,
+            backgroundColor: "var(--deep-blue)",
+            opacity: opacityCommBackround2,
+          }}
+        ></motion.div>
+        <motion.div
+          className="comms-info-container"
+          style={{ opacity: infoOpacity }}
         >
-          <motion.div
-            className="comms-backround"
-            style={{
-              position: "sticky",
-              backgroundColor: "var(--deep-blue)",
-              left: props.leftMargin,
-              top: "0px",
-              width: props.width,
-              height: "100vh",
-            }}
-          ></motion.div>
-
           <motion.div
             className="comms-info-container"
             style={{
               opacity: props.commsOpacity,
-              height: "100vh",
-              display: "flex",
-              position: "absolute",
             }}
           >
             <div className="comms-displayer">
@@ -189,14 +205,12 @@ export default function Comms(props) {
             </div>
           </motion.div>
         </motion.div>
-
-        <OurSponsors
-          slideLeft={slideLeft2}
-          topOffset={topOffset}
-          scrollY={scrollYProgress}
-        />
       </motion.div>
-
+      <OurSponsors
+        leftMargin={left2}
+        width={width2}
+        sponOpacity={sponOpacity}
+      />
       <Sponsors />
     </>
   );

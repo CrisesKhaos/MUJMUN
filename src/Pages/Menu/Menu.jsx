@@ -146,20 +146,6 @@ export default function Menu(props) {
             >
               Our Team
             </motion.div>
-            <motion.div
-              className="page-title"
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 0.5 + 0.4,
-                ease: "easeInOut",
-              }}
-              onClick={() => {
-                menuHandler();
-              }}
-            >
-              Contact Us
-            </motion.div>
           </motion.div>
           <div className="mun-title">
             {matches ? (

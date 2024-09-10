@@ -25,7 +25,10 @@ export default function Footer() {
             <FaInstagram className="insta-footer" />
           </div>
         </a>
-        <a>
+        <a
+          href="https://www.linkedin.com/company/litmus-manipal-university-jaipur/posts/?feedView=all"
+          target="_blank"
+        >
           <div className="btn">
             <FaLinkedinIn className="linkedin-footer" />
           </div>
@@ -35,7 +38,7 @@ export default function Footer() {
             <FiGithub className="github-footer" />
           </div>
         </a>
-        <a>
+        <a href="mailto:mujmun.official@gmail.com">
           <div className="btn">
             <MdMailOutline className="mail-footer" />
           </div>
