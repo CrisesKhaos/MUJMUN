@@ -2,7 +2,9 @@
   font-size: 7em;
   position: absolute;
   top: 2vw;
-  left: 27.5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   font-family: "Inter";
   font-weight: 600;
   color: var(--brown);

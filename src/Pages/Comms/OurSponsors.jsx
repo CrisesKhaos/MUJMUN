@@ -35,23 +35,12 @@ function OurSponsors(props) {
       }}
     >
       <motion.div
-        className="comms-revealer"
-        style={{
-          height: "100vh",
-          display: "flex",
-          position: "absolute",
-          top: "0%",
-          width: props.width,
-          left: props.leftMargin,
-          backgroundColor: "var(--deep-blue)",
-          zIndex: 5,
-        }}
-      ></motion.div>
-      <motion.div
         style={{ opacity: props.sponOpacity }}
         className="sponsor-info-container"
       >
-        <div className="sponsor-title">Our Sponsors</div>
+        <div className="sponsor-title">
+          <div>Our Sponsors</div>
+        </div>
         <motion.div
           className="card-container"
           style={{ top: boxOffset1, scale: boxScale1 }}

@@ -38,29 +38,9 @@ export default function Comms(props) {
     target: commsRef,
     offset: ["start start", "end end"],
   });
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: commsRef,
-    offset: ["start start", "end start"],
-  });
 
-  const topOffset = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-  const ourTeam = useTransform(scrollYProgress, [0.2, 1], [1, 5]);
-  const render = useTransform(scrollYProgress, [0.9, 1], ["none", "flex"]);
-  const infoOpacity = useTransform(scrollYProgress2, [0.2, 0.3], [1, 0]);
-  const sponOpacity = useTransform(scrollYProgress2, [0.9, 1], [0, 1]);
-  const opacityCommBackround = useTransform(
-    scrollYProgress2,
-    [0, 0.001],
-    [1, 0]
-  );
-  const opacityCommBackround2 = useTransform(
-    scrollYProgress2,
-    [0, 0.0001],
-    [0, 1]
-  );
+  const topOffset = useTransform(scrollYProgress, [0, 1], ["0vh", "40vh"]);
 
-  const width2 = useTransform(scrollYProgress2, [0.1, 1], ["100vw", "0vw"]);
-  const left2 = useTransform(scrollYProgress2, [0.1, 1], ["0vw", "50vw"]);
   useEffect(() => {
     const temp = currComm * 14.28;
     setimgYVal(`-${temp}%`);
@@ -78,139 +58,117 @@ export default function Comms(props) {
             width: props.width,
             left: props.leftMargin,
             backgroundColor: "var(--deep-blue)",
-            opacity: opacityCommBackround,
           }}
         ></motion.div>
-        <motion.div
-          className="comms-backround1"
-          style={{
-            height: "100vh",
-            display: "flex",
-            position: "absolute",
-            top: topOffset,
-            width: width2,
-            left: left2,
-            backgroundColor: "var(--deep-blue)",
-            opacity: opacityCommBackround2,
-          }}
-        ></motion.div>
+
         <motion.div
           className="comms-info-container"
-          style={{ opacity: infoOpacity }}
+          style={{
+            opacity: props.commsOpacity,
+          }}
         >
-          <motion.div
-            className="comms-info-container"
-            style={{
-              opacity: props.commsOpacity,
-            }}
-          >
-            <div className="comms-displayer">
-              <motion.div
-                className="comms-imgs-container"
-                animate={{ y: imgyVal }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
-              >
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={unga}></img>
-                </div>
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={unsc}></img>
-                </div>
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={unhrc}></img>
-                </div>
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={iaea}></img>
-                </div>
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={lok_sabha}></img>
-                </div>
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={intPress}></img>
-                </div>
-                <div className="comms-equalizer">
-                  <img className="comms-logo" src={cbfc}></img>
-                </div>
-              </motion.div>
-            </div>
-            <div className="comm-menu">
-              <motion.div
-                className="comm-menu-circle"
-                onClick={() => {
-                  if (currComm - 1 < 0) changeIndex(6);
-                  else changeIndex((currComm - 1) % 7);
-                }}
-                style={{ rotate: matches ? "-90deg" : null }}
-                whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaArrowUp />
-              </motion.div>
-              {commNames.map((x, index) => (
-                <motion.div
-                  className={
-                    index == currComm
-                      ? "comm-menu-button-selected"
-                      : "comm-menu-button"
-                  }
-                  whileTap={{ scale: 0.9 }}
-                  whileHover={{ scale: 1.05 }}
-                  onClick={() => {
-                    changeIndex(index);
-                  }}
-                />
-              ))}
-
-              <motion.div
-                className="comm-menu-circle"
-                onClick={() => {
-                  changeIndex((1 + currComm) % 7);
-                }}
-                style={{ rotate: matches ? "-90deg" : null }}
-                whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaArrowDown />
-              </motion.div>
-            </div>
-            <div className="comms-info">
-              <Zopper currentComm={currComm} />
-              <div className="comms-info-description">
-                <motion.div
-                  variants={{
-                    initial: { opacity: 1, y: "10px" },
-                    fadeOut: { opacity: 0, y: "-10px" },
-                  }}
-                  animate={animateInfo}
-                  initial="initial"
-                >
-                  {commNames[currComm].description}
-                </motion.div>
-                <motion.div
-                  variants={{
-                    initial: { opacity: 1, y: "10px" },
-                    fadeOut: { opacity: 0, y: "-10px" },
-                  }}
-                  animate={animateInfo}
-                  initial="initial"
-                  style={{ marginTop: "20px" }}
-                >
-                  <u>Agenda</u> -{commNames[currComm].agenda}
-                </motion.div>
+          <div className="comms-displayer">
+            <motion.div
+              className="comms-imgs-container"
+              animate={{ y: imgyVal }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+              }}
+            >
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={unga}></img>
               </div>
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={unsc}></img>
+              </div>
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={unhrc}></img>
+              </div>
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={iaea}></img>
+              </div>
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={lok_sabha}></img>
+              </div>
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={intPress}></img>
+              </div>
+              <div className="comms-equalizer">
+                <img className="comms-logo" src={cbfc}></img>
+              </div>
+            </motion.div>
+          </div>
+          <div className="comm-menu">
+            <motion.div
+              className="comm-menu-circle"
+              onClick={() => {
+                if (currComm - 1 < 0) changeIndex(6);
+                else changeIndex((currComm - 1) % 7);
+              }}
+              style={{ rotate: matches ? "-90deg" : null }}
+              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaArrowUp />
+            </motion.div>
+            {commNames.map((x, index) => (
+              <motion.div
+                className={
+                  index == currComm
+                    ? "comm-menu-button-selected"
+                    : "comm-menu-button"
+                }
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => {
+                  changeIndex(index);
+                }}
+              />
+            ))}
+
+            <motion.div
+              className="comm-menu-circle"
+              onClick={() => {
+                changeIndex((1 + currComm) % 7);
+              }}
+              style={{ rotate: matches ? "-90deg" : null }}
+              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaArrowDown />
+            </motion.div>
+          </div>
+          <div className="comms-info">
+            <Zopper currentComm={currComm} />
+            <div className="comms-info-description">
+              <motion.div
+                variants={{
+                  initial: { opacity: 1, y: "10px" },
+                  fadeOut: { opacity: 0, y: "-10px" },
+                }}
+                animate={animateInfo}
+                initial="initial"
+              >
+                {commNames[currComm].description}
+              </motion.div>
+              <motion.div
+                variants={{
+                  initial: { opacity: 1, y: "10px" },
+                  fadeOut: { opacity: 0, y: "-10px" },
+                }}
+                animate={animateInfo}
+                initial="initial"
+                style={{ marginTop: "20px" }}
+              >
+                <u>Agenda</u> -{commNames[currComm].agenda}
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </motion.div>
-      <OurSponsors
-        leftMargin={left2}
-        width={width2}
-        sponOpacity={sponOpacity}
-      />
+      <OurSponsors />
       <Sponsors />
     </>
   );
