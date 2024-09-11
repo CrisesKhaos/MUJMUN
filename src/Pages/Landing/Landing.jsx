@@ -59,7 +59,11 @@ export default function Landing() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <motion.div className="logo-left">
-            <motion.img src={logoLeft} style={{ opacity: leftLogoOpacity }} />
+            <motion.img
+              className="left-img"
+              src={logoLeft}
+              style={{ opacity: leftLogoOpacity }}
+            />
           </motion.div>
 
           <motion.div
@@ -68,7 +72,7 @@ export default function Landing() {
               opacity: leftLogoOpacity,
             }}
           >
-            <motion.img src={logoRight} />
+            <motion.img src={logoRight} className="right-img" />
           </motion.div>
           <motion.div
             className="logo-right"

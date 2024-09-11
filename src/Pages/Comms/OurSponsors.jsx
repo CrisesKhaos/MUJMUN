@@ -26,6 +26,7 @@ function OurSponsors(props) {
   return (
     <motion.div
       ref={contRef}
+      id="sponID"
       className="sponsor-wrapper"
       style={{
         height: "250vh",
@@ -69,6 +70,26 @@ function OurSponsors(props) {
 
         <motion.div className="card-container" style={{ top: boxOffset2 }}>
           <div className="card2">
+            <div style={{ display: "none" }}>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="sponsor-info"
+              >
+                <div className="card-title">{sponsors[0].title}</div>
+                <div className="card-desc">{sponsors[0].description}</div>
+              </motion.div>
+              <motion.div className="card-imgs">
+                <motion.img
+                  className="card-img"
+                  src={globalLogo}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5 }}
+                />
+              </motion.div>
+            </div>
             <div className="card-title">TBA</div>
           </div>
         </motion.div>

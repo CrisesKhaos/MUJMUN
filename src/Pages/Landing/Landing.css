@@ -149,21 +149,48 @@
     top: 0px;
     left: 0px;
   }
-  .logo-left {
+  .left-img {
     height: 50vh;
     width: 70vw;
   }
+
+  .right-img {
+    height: 50vh;
+    width: 30vw;
+  }
+  .logo-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    height: 50vh;
+    width: 70vw;
+    .img {
+      object-fit: contain;
+    }
+  }
   .logo-left-overlay {
+    display: flex;
+    flex-direction: row-reverse;
+
     height: 50vh;
     width: 70vw;
   }
   .logo-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
     height: 50vh;
     width: 30vw;
     right: 0%;
     overflow: hidden;
   }
   .logo-right-overlay {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
     height: 50vh;
     width: 30vw;
     left: 70vw;

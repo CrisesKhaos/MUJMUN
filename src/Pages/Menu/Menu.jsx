@@ -15,6 +15,7 @@ export default function Menu(props) {
   var homeId = document.getElementById("homeID");
   var commsId = document.getElementById("commsID");
   var aboutId = document.getElementById("aboutID");
+  var sponId = document.getElementById("sponID");
   var teamId = document.getElementById("teamID");
 
   const menuHandler = () => {
@@ -125,10 +126,26 @@ export default function Menu(props) {
               onClick={() => {
                 menuHandler();
 
-                aboutId.scrollIntoView();
+                sponId.scrollIntoView();
               }}
             >
               Sponsors
+            </motion.div>
+            <motion.div
+              className="page-title"
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 0.5 + 0.2,
+                ease: "easeInOut",
+              }}
+              onClick={() => {
+                menuHandler();
+
+                aboutId.scrollIntoView();
+              }}
+            >
+              About Us
             </motion.div>
             <motion.div
               className="page-title"

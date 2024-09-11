@@ -88,16 +88,15 @@
 @media (max-width: 500px) {
   .sponsor-title {
     font-size: 3em;
-    left: 0vw;
     top: 11vh;
-    left: 15%;
+    width: 100%;
   }
 
   .card-container {
     .card1 {
       flex-direction: column-reverse;
       width: 80%;
-      height: 70%;
+      height: fit-content;
       padding-top: 25px;
     }
     .card-imgs {

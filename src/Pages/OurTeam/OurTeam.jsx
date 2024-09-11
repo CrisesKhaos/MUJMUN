@@ -171,10 +171,7 @@ export default function OurTeam(props) {
                       <br></br>I am firmly rooted in the belief that "leaders
                       don’t force people to follow; they invite them on a
                       journey," and with this in mind, I want all of you to be a
-                      part of our MUJMUN journey. I look forward to your
-                      participation in this conference and to making it an
-                      enlightening and enjoyable experience for everyone
-                      involved.
+                      part of our MUJMUN journey.
                     </div>
                   </div>
                   <div className="person-socials">
