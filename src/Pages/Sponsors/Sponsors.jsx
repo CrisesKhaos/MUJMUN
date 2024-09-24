@@ -7,6 +7,7 @@ import p_2 from "./SponLogos/p_2.jpeg";
 import p_3 from "./SponLogos/p_3.jpeg";
 import p_4 from "./SponLogos/p_4.jpeg";
 import p_5 from "./SponLogos/p5.jpg";
+import p_6 from "./SponLogos/p_6.jpeg";
 import { ImInstagram } from "react-icons/im";
 import useMediaQuery from "../Landing/useMediaQuery";
 
@@ -123,7 +124,9 @@ export default function Sponsors() {
                 style={{
                   opacity: useTransform(scrollYProgress, [0.5, 0.85], [1, 0]),
                 }}
-              ></motion.div>
+              >
+                <img src={p_6}></img>
+              </motion.div>
             </motion.div>
 
             <motion.div

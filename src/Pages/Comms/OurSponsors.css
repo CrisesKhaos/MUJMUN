@@ -31,6 +31,7 @@
 .card-img {
   object-fit: contain;
   width: 100%;
+  height: 100%;
 }
 
 .sponsor-info-container {
@@ -74,14 +75,14 @@
   }
 
   .card2 {
+    color: white;
     width: 60vw;
     height: 60vh;
     background-color: var(--maroon);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
     border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
   }
 }
 
@@ -95,8 +96,8 @@
   .card-container {
     .card1 {
       flex-direction: column-reverse;
-      width: 80%;
-      height: fit-content;
+      width: 85%;
+      height: 75vh;
       padding-top: 25px;
     }
     .card-imgs {
@@ -105,8 +106,8 @@
     }
     .card2 {
       flex-direction: column-reverse;
-      width: 80%;
-      height: 70%;
+      height: 75vh;
+      width: 85%;
     }
 
     .card-title {

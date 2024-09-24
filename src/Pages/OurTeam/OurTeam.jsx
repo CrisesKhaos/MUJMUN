@@ -154,10 +154,7 @@ export default function OurTeam(props) {
                   tapHandler(0);
                 }}
               >
-                <img
-                  src={jatin}
-                  style={{ marginLeft: matches ? "0px" : "25px" }}
-                ></img>
+                <img src={jatin}></img>
                 <div className="big-div">
                   <div className="person-container">
                     <div className="person-name">Jatin Juneja</div>
@@ -244,10 +241,7 @@ export default function OurTeam(props) {
                     </>
                   </motion.div>
                 )}
-                <img
-                  src={tanay}
-                  style={{ marginLeft: matches ? "0px" : "25px" }}
-                ></img>
+                <img src={tanay}></img>
 
                 <div className="big-div">
                   <div className="person-container">
@@ -322,10 +316,7 @@ export default function OurTeam(props) {
                     </>
                   </motion.div>
                 )}
-                <img
-                  src={ananya}
-                  style={{ marginLeft: matches ? "0px" : "25px" }}
-                ></img>
+                <img src={ananya}></img>
 
                 <div className="big-div">
                   <div className="person-container">
