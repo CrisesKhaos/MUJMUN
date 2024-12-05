@@ -17,4 +17,4 @@ This React-based website, powered by Framer Motion for stunning animations, was 
 * **Framer Motion:** A library for building beautiful, accessible motion experiences.
 * **[Other Technologies Used, e.g., CSS, JavaScript, HTML]**
 
-**Hosted Link:** [mujmun.live](mujmun.live)
+**Hosted Link:** [mujmun.live](https://mujmun.live)
